@@ -1,0 +1,273 @@
+html{
+    scroll-behavior: smooth;
+}
+section{
+    scroll-margin-top: 90px;
+}
+.FAI-logo {
+ 
+    border-radius: 50%;
+   
+}
+
+/* ===== Reset ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050816;
+     color:white;
+}
+
+/* ===== Navbar ===== */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    background: #070B1F;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFC107;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navebar-link {
+    position: relative;          /* ⭐ খুব গুরুত্বপূর্ণ */
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color .3s ease;
+}
+
+/* Text Color */
+.navebar-link:hover {
+    color: #FFC107;
+}
+
+/* Underline */
+.navebar-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;               /* Text থেকে gap */
+    width: 0;
+    height: 3px;
+    background: #FFC107;
+    border-radius: 50px;
+    transition: width .3s ease;
+}
+
+/* Hover হলে underline */
+.navebar-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu */
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Secction Home & Navigation Bar CSS starts from here */
+#home {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.container1 {
+    /* width Screen-এর 90% ব্যবহার করবে। */
+    width:90%; 
+
+    /* Monitor বড় হলেও 1200px-এর বেশি বড় হবে না। */
+    max-width:1200px;
+
+    /* margin:auto; /* Center করে। */
+    margin:auto;
+
+    /* display:flex বাম-ডান পাশাপাশি করে। */
+    display:flex;
+
+    /* Items এর মধ্যে সমান দূরত্ব তৈরি করা */
+    justify-content:space-between;
+
+    /* প্রপার্টিটি Flexbox বা Grid কন্টেইনারের ভেতরের উপাদানগুলোকে (items) লম্বালম্বিভাবে (vertically) মাঝখানে সারিবদ্ধ করতে ব্যবহার করা হয় */
+    align-items:center;
+
+    /* মূলত Flexbox বা Grid লেআউটের ভেতরের উপাদানগুলোর (items) মাঝখানের দূরত্ব বা ফাঁকা জায়গা তৈরি করার জন্য ব্যবহার করা হয়। */
+    gap:50px;
+
+}
+
+.Home-Content {
+
+    /* flex:1 = সমান জায়গা। */
+    flex:1;
+
+}
+.Home-Content h1 {
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+}
+
+.white{
+    color:white;
+}
+
+.Yellow{
+    color:#FACC15;
+}
+.line{
+
+    width:65px;
+
+    height:4px;
+
+    background:#FACC15;
+
+    margin-bottom:20px;
+
+}
+
+.Home-Content h2{
+
+    color:#D1D5DB;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.Home-Content p{
+
+    color:#9CA3AF;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    max-width:550px;
+
+    margin-bottom:35px;
+
+}
+
+.button-container{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.button1,
+.button2{
+
+    padding:14px 28px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.button1{
+
+    background:#FACC15;
+
+    color:#10111A;
+
+}
+
+.button1:hover{
+
+    background:#EAB308;
+
+    transform:scale(1.1);
+
+    box-shadow:0 0 25px rgba(250,204,21,.4);
+
+}
+
+.button2{
+
+    border:2px solid #FACC15;
+
+    color:#FACC15;
+
+}
+
+.button2:hover{
+
+    background:#FACC15;
+
+    color:#10111A;
+
+    transform:scale(1.1);
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.Profile-Image img{
+
+    width:320px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+}
+
+.Profile-Image img:hover{
+
+    transform:scale(1.15);
+
+    box-shadow:0 0 40px rgba(250,204,21,.25);
+
+}

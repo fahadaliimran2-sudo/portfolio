@@ -1,0 +1,138 @@
+html{
+    scroll-behavior: smooth;
+}
+section{
+    scroll-margin-top: 90px;
+}
+/* About Section */
+
+#about{
+
+/* Property       কাজ
+background        পুরো সেকশনের রং
+padding:80px 0    উপরে–নিচে 80px ফাঁকা */
+   
+    background:#050816;
+    padding:80px 0;
+
+}
+
+
+.container2{
+
+/* Property         কাজ
+width:90%          Screen-এর 90% ব্যবহার
+max-width:1200px   এর বেশি বড় হবে না
+margin:auto        মাঝখানে আনবে
+display:flex       পাশাপাশি Layout
+gap:60px           দুই কলামের মাঝে ফাঁকা */
+   
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:60px;
+}
+
+.about-left {
+    flex:1;
+}
+/* flex:1 মানে কী? দুই পাশ সমান Width নেবে। */
+.about-right {
+    flex:1;
+    width:50%;
+}
+
+
+
+.about-left h2{
+    font-size:42px;
+    color:#fff;
+    margin-bottom:15px;
+}
+.about-right h2{
+    font-size:42px;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+
+.line2{
+
+    width:65px;
+    height:4px;
+    background:#FACC15;
+    margin-bottom:30px;
+
+}
+
+
+.about-left p{
+
+    color:#D1D5DB;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:25px;
+    text-align:justify;
+
+}
+.education-card{
+    width:100%;
+    background:#18192A;
+    border:1px solid #2A2C45;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:20px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.education-card h3{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.education-card h4{
+    color:#FACC15;
+    font-size:17px;
+    margin-bottom:10px;
+    line-height:1.4;
+}
+
+.education-card p{
+    color:#D1D5DB;
+    margin-bottom:6px;
+}
+
+.education-card span{
+    color:#fff;
+    font-weight:bold;
+}
+
+
+
+/* .education-card:hover{
+    transform: scale(1.07);
+
+    box-shadow:
+        0 0 18px rgba(255,255,255,0.12),
+        0 0 35px rgba(255,255,255,0.06);
+
+    border-color: rgba(255,255,255,0.15);
+} */
+
+
+.education-card:hover{
+    transform: translateY(-4px) scale(1.07);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.35),
+        0 0 20px rgba(255,255,255,.10),
+        0 0 45px rgba(255,255,255,.05);
+}
