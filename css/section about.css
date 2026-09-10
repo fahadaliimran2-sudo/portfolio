@@ -30,7 +30,6 @@ gap:60px           দুই কলামের মাঝে ফাঁকা */
     width:90%;
     max-width:1200px;
     margin:auto;
-
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
@@ -128,11 +127,150 @@ gap:60px           দুই কলামের মাঝে ফাঁকা */
 
 .education-card:hover{
     transform: translateY(-4px) scale(1.07);
-
     border:1px solid rgba(255,255,255,.18);
-
     box-shadow:
         0 8px 20px rgba(0,0,0,.35),
         0 0 20px rgba(255,255,255,.10),
         0 0 45px rgba(255,255,255,.05);
+}
+
+/* =========================================
+   ABOUT SECTION - MOBILE
+   320px - 679px
+========================================= */
+
+@media (min-width: 320px) and (max-width: 679px) {
+
+    /* ===== About Section ===== */
+
+    #about {
+        padding: 60px 0;
+    }
+
+
+    /* ===== Main Container ===== */
+
+    .container2 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+
+    /* ===== Left Side ===== */
+
+    .about-left {
+        width: 100%;
+    }
+
+
+    /* ===== Right Side ===== */
+
+    .about-right {
+        width: 100%;
+    }
+
+
+    /* ===== Headings ===== */
+
+    .about-left h2,
+    .about-right h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+
+    /* ===== Yellow Line ===== */
+
+    .line2 {
+        width: 55px;
+        height: 4px;
+        margin-bottom: 25px;
+    }
+
+
+    /* ===== Paragraph ===== */
+
+    .about-left p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+
+    /* ===== Education Cards ===== */
+
+    .education-card {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 18px;
+    }
+
+
+    .education-card h3 {
+        font-size: 18px;
+    }
+
+
+    .education-card h4 {
+        font-size: 16px;
+    }
+
+
+    .education-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+}
+
+/* =========================================
+   ABOUT SECTION - TABLET
+   680px - 1199px
+========================================= */
+
+@media (min-width: 680px) and (max-width: 1199px) {
+
+    #about {
+        padding: 70px 0;
+    }
+
+    .container2 {
+        width: 90%;
+        gap: 35px;
+    }
+
+    .about-left,
+    .about-right {
+        width: 50%;
+    }
+
+    .about-left h2,
+    .about-right h2 {
+        font-size: 36px;
+    }
+
+    .about-left p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+    .education-card h3 {
+        font-size: 18px;
+    }
+
+    .education-card h4 {
+        font-size: 16px;
+    }
+
+    .education-card p {
+        font-size: 15px;
+    }
+
 }
