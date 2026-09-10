@@ -1,41 +1,51 @@
 html{
+    /* scroll-behavior: smooth → ক্লিক করলে স্মুথ স্ক্রল */
     scroll-behavior: smooth;
 }
 section{
+    /* scroll-margin-top: 90px → স্ক্রল করলে উপরের দিকে 90px ফাঁকা রাখবে। */
     scroll-margin-top: 90px;
 }
 .FAI-logo {
  
+    /* border-radius: 50% → ইমেজ/লোগো korner গোল হবে */
     border-radius: 50%;
    
 }
 
 /* ===== Reset ===== */
 *{
+/* *                    সব এলিমেন্ট
+margin:0                বাইরের ফাঁকা সরাও
+padding:0               ভিতরের ফাঁকা সরাও
+box-sizing:border-box   Width-এর ভিতরেই Padding + Border ধরো */
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #050816;
-     color:white;
+    font-family: Arial, Helvetica, sans-serif;   
+    background: #050816; /* background color */
+    color:white;         /* text color */
 }
 
 /* ===== Navbar ===== */
+#menu-toggle {
+    display: none;
+}
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 70px;
+    display: flex;              /* পাশাপাশি */
+    justify-content: space-between;  /* দুই পাশে */
+    align-items: center;          /* মাঝখানে */
+    padding: 20px 70px;          /* ভিতরের ফাঁকা */
     background: #070B1F;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-    position: sticky;
+    border-bottom: 1px solid rgba(255,255,255,.08);  /* নিচের লাইন */
+    position: sticky;     /* উপরে আটকে থাকবে */
     top: 0;
-    width: 100%;
-
-    z-index: 9999; 
+    width: 100%;  /* পুরো প্রস্থ */
+    z-index: 9999; /* সবকিছুর উপরে */
 }
 
 .logo{
@@ -45,18 +55,18 @@ body{
 }
 
 .nav-links{
-    display: flex;
-    list-style: none;
-    gap: 35px;
+    display: flex;     /* পাশাপাশি */
+    list-style: none;  /* Bullet তুলে দেয় */
+    gap: 35px;         /* আইটেমের মাঝে 35px ফাঁকা */
 }
 
 .navebar-link {
-    position: relative;          /* ⭐ খুব গুরুত্বপূর্ণ */
+    position: relative;   /*নিজের পজিশন ধরে রাখা , ⭐ খুব গুরুত্বপূরণ */
     color: white;
     text-decoration: none;
     font-size: 17px;
-    font-weight: 600;
-    transition: color .3s ease;
+    font-weight: 600;             /* Semi Bold */
+    transition: color .3s ease;   /* রং 0.3s এ স্মুথ বদলাবে */
 }
 
 /* Text Color */
@@ -133,11 +143,8 @@ body{
 .Home-Content h1 {
 
     font-size:64px;
-
     line-height:1.1;
-
     font-weight:800;
-
     margin-bottom:15px;
 
 }
@@ -152,11 +159,8 @@ body{
 .line{
 
     width:65px;
-
     height:4px;
-
     background:#FACC15;
-
     margin-bottom:20px;
 
 }
@@ -164,9 +168,7 @@ body{
 .Home-Content h2{
 
     color:#D1D5DB;
-
     font-size:30px;
-
     margin-bottom:20px;
 
 }
@@ -174,13 +176,9 @@ body{
 .Home-Content p{
 
     color:#9CA3AF;
-
     font-size:19px;
-
     line-height:1.8;
-
     max-width:550px;
-
     margin-bottom:35px;
 
 }
@@ -188,7 +186,6 @@ body{
 .button-container{
 
     display:flex;
-
     gap:20px;
 
 }
@@ -197,13 +194,9 @@ body{
 .button2{
 
     padding:14px 28px;
-
     text-decoration:none;
-
     font-weight:600;
-
     border-radius:8px;
-
     transition:.3s;
 
 }
@@ -211,7 +204,6 @@ body{
 .button1{
 
     background:#FACC15;
-
     color:#10111A;
 
 }
@@ -219,9 +211,7 @@ body{
 .button1:hover{
 
     background:#EAB308;
-
     transform:scale(1.1);
-
     box-shadow:0 0 25px rgba(250,204,21,.4);
 
 }
@@ -229,7 +219,6 @@ body{
 .button2{
 
     border:2px solid #FACC15;
-
     color:#FACC15;
 
 }
@@ -237,9 +226,7 @@ body{
 .button2:hover{
 
     background:#FACC15;
-
     color:#10111A;
-
     transform:scale(1.1);
 
 }
@@ -257,15 +244,10 @@ body{
 .Profile-Image img{
 
     width:320px;
-
     height:320px;
-
     object-fit:cover;
-
     border-radius:20px;
-
     transition:.3s;
-
     box-shadow:0 10px 25px rgba(0,0,0,.4);
 
 }
@@ -273,7 +255,207 @@ body{
 .Profile-Image img:hover{
 
     transform:scale(1.15);
-
     box-shadow:0 0 40px rgba(250,204,21,.25);
 
 }
+
+/* =========================================
+   MOBILE RESPONSIVE
+   320px - 679px
+========================================= */
+
+@media (min-width: 320px) and (max-width: 679px) {
+
+
+    .navbar {
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+    }
+
+
+    /* ===== Logo ===== */
+
+    .logo {
+        font-size: 26px;
+    }
+
+
+    /* ===== Hamburger Button ===== */
+
+    .menu-btn {
+        display: block;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+
+    /* ===== Mobile Menu ===== */
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
+        background: #070B1F;
+        text-align: center;
+    }
+
+
+    /* ===== Open Menu ===== */
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+
+    /* ===== Mobile Link ===== */
+
+    .navebar-link {
+        font-size: 16px;
+    }
+
+
+
+
+    /* ===== Home Section ===== */
+
+    #home {
+        padding: 50px 0;
+    }
+
+    .container1 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+
+    /* ===== Home Content ===== */
+
+    .Home-Content {
+        width: 100%;
+    }
+
+    .Home-Content h1 {
+        font-size: 42px;
+        line-height: 1.15;
+        margin-bottom: 15px;
+    }
+
+    .line {
+        width: 55px;
+        height: 4px;
+        margin: 0 auto 20px;
+    }
+
+    .Home-Content h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .Home-Content p {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    /* ===== Buttons ===== */
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .button1,
+    .button2 {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+
+    /* ===== Profile Image ===== */
+
+    .Profile-Image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .Profile-Image img {
+        width: 260px;
+        height: 260px;
+    }
+
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+   680px - 1199px
+========================================= */
+
+@media (min-width: 680px) and (max-width: 1199px) {
+
+    /* ===== Navbar ===== */
+
+    .navbar {
+        padding: 18px 40px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .navebar-link {
+        font-size: 15px;
+    }
+
+
+    /* ===== Home ===== */
+
+    #home {
+        padding: 60px 0;
+    }
+
+    .container1 {
+        width: 90%;
+        gap: 30px;
+    }
+
+
+    /* ===== Content ===== */
+
+    .Home-Content h1 {
+        font-size: 50px;
+    }
+
+    .Home-Content h2 {
+        font-size: 26px;
+    }
+
+    .Home-Content p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+
+    /* ===== Image ===== */
+
+    .Profile-Image img {
+        width: 280px;
+        height: 280px;
+    }
+
+}
+
