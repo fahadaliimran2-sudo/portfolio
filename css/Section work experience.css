@@ -90,7 +90,7 @@ section{
 }
 
 .work-card:hover .work-card-body{
-    max-height:700px;
+    max-height:1500px;
     padding:25px;
     border-top:2px solid rgba(250,204,21,.4);
 }
